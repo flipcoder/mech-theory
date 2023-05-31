@@ -3,6 +3,8 @@
 \usepackage{tikz}
 \usepackage{multicol}
 \usepackage{fancyhdr}
+\usepackage{xcolor}
+\usetikzlibrary{shadows}
 
 \begin{document}
 
@@ -11,6 +13,7 @@
 \rhead{}
 \lhead{}
 \cfoot{github.com/flipcoder/midimech}
+
 \section{Intervals}
 
 \begin{multicols}{4}
@@ -133,6 +136,7 @@
   \fill[white] (1.5,0.5) circle (0.3);
   \fill[black] (0,2) rectangle ++(1,1);
   
+  
   \node[right] at (5.5,1.5) {m6};
 \end{tikzpicture}\vspace{.5cm}
 
@@ -174,7 +178,7 @@
 
 \end{multicols}
 
-\section{Basic Chord Shapes}
+\section{Chords}
 
 \begin{multicols}{4}
 
@@ -406,21 +410,18 @@
   \node[right] at (5.5,1.5) {maj+7};
 \end{tikzpicture}\vspace{.5cm}
 
-% DOM9
 \begin{tikzpicture}[scale=0.25]
   % Draw the grid with transparent borders
   \draw[draw=none, fill=none] (0,0) grid (3,3);
-
-  \fill[black] (0,2) rectangle ++(1,1);
+  
+  % Fill in and color specific squares
   \fill[black] (0,0) rectangle ++(1,1);
   \fill[white] (0.5,0.5) circle (0.3);
-  \fill[black] (1,1) rectangle ++(1,1);
+  \fill[black] (3,0) rectangle ++(1,1);
   \fill[black] (2,0) rectangle ++(1,1);
-  \fill[black] (2,2) rectangle ++(1,1);
-  \draw[line width=1pt, white] (2,0) -- ++(1,1);
-  \draw[line width=1pt, white] (2,1) -- ++(1,-1);
+  \fill[black] (3,1) rectangle ++(1,1);
   
-  \node[right] at (5.5,1.5) {dom9};
+  \node[right] at (5.5,1.5) {maj7b5};
 \end{tikzpicture}\vspace{.5cm}
 
 \end{multicols}
@@ -456,34 +457,34 @@
   \node[right] at (5.5,1.5) {maj6};
 \end{tikzpicture}\vspace{.5cm}
 
-% MAJOR6
 \begin{tikzpicture}[scale=0.25]
   % Draw the grid with transparent borders
   \draw[draw=none, fill=none] (0,0) grid (3,3);
   
   % Fill in and color specific squares
-  \fill[black] (0,0) rectangle ++(1,1);
-  \fill[white] (0.5,0.5) circle (0.3);
-  \fill[black] (2,0) rectangle ++(1,1);
-  \fill[black] (3,0) rectangle ++(1,1);
+  \fill[black] (1,0) rectangle ++(1,1);
+  \fill[white] (1.5,0.5) circle (0.3);
+  \fill[black] (0,1) rectangle ++(1,1);
+  \fill[black] (2,1) rectangle ++(1,1);
+  \fill[black] (3,1) rectangle ++(1,1);
   
-  \node[right] at (5.5,1.5) {flat5};
+  \node[right] at (5.5,1.5) {m6};
 \end{tikzpicture}\vspace{.5cm}
 
-% MAJOR6
 \begin{tikzpicture}[scale=0.25]
   % Draw the grid with transparent borders
   \draw[draw=none, fill=none] (0,0) grid (3,3);
-  
-  % Fill in and color specific squares
+
+  \fill[black] (0,2) rectangle ++(1,1);
   \fill[black] (0,0) rectangle ++(1,1);
   \fill[white] (0.5,0.5) circle (0.3);
-  \fill[black] (1.5,0.5) circle (0.2);
-  \fill[black] (2.5,0.5) circle (0.2);
   \fill[black] (1,1) rectangle ++(1,1);
-  \fill[black] (3,0) rectangle ++(1,1);
+  \fill[black] (2,0) rectangle ++(1,1);
+  \fill[black] (2,2) rectangle ++(1,1);
+  \draw[line width=1pt, white] (2,0) -- ++(1,1);
+  \draw[line width=1pt, white] (2,1) -- ++(1,-1);
   
-  \node[right] at (5.5,1.5) {lydian};
+  \node[right] at (5.5,1.5) {dom9};
 \end{tikzpicture}\vspace{.5cm}
 
 \end{multicols}
@@ -573,10 +574,10 @@
   \fill[black] (0,1) rectangle ++(1,1);
   \fill[white] (0.5,1.5) circle (0.3);
   \fill[black] (0,0) rectangle ++(1,1);
+  \draw[line width=1pt, white] (0,0) -- ++(1,1);
+  \draw[line width=1pt, white] (0,1) -- ++(1,-1);
   \fill[black] (2,1) rectangle ++(1,1);
   \fill[black] (2,0) rectangle ++(1,1);
-  \draw[line width=1pt, white] (2,0) -- ++(1,1);
-  \draw[line width=1pt, white] (2,1) -- ++(1,-1);
   
   \node[right] at (5.5,1.5) {maj7/5};
 \end{tikzpicture}\vspace{.5cm}
@@ -692,7 +693,170 @@
   \node[right] at (5.5,1.5) {dom7/b7};
 \end{tikzpicture}\vspace{.5cm}
 
+
 \end{multicols}
+\section{Shell Voicings}
+\begin{multicols}{4}
+
+\begin{tikzpicture}[scale=0.25]
+  % Draw the grid with transparent borders
+  \draw[draw=none, fill=none] (0,0) grid (3,3);
+  
+  \fill[black] (0,0) rectangle ++(1,1);
+  \fill[white] (0.5,0.5) circle (0.3);
+  \fill[black] (3,2) rectangle ++(1,1);
+  \fill[black] (3,1) rectangle ++(1,1);
+  
+  \node[right] at (5.5,1.5) {maj7};
+\end{tikzpicture}\vspace{.5cm}
+
+\begin{tikzpicture}[scale=0.25]
+  % Draw the grid with transparent borders
+  \draw[draw=none, fill=none] (0,0) grid (3,3);
+  
+  \fill[black] (0,-1) rectangle ++(1,1);
+  \fill[white] (0.5,-0.5) circle (0.3);
+  \fill[black] (0,2) rectangle ++(1,1);
+  \fill[black] (0,1) rectangle ++(1,1);
+  
+  \node[right] at (5.5,1.5) {m7};
+\end{tikzpicture}\vspace{.5cm}
+
+\begin{tikzpicture}[scale=0.25]
+  % Draw the grid with transparent borders
+  \draw[draw=none, fill=none] (0,0) grid (3,3);
+  
+  \fill[black] (0,0) rectangle ++(1,1);
+  \fill[white] (0.5,0.5) circle (0.3);
+  \fill[black] (0,2) rectangle ++(1,1);
+  \fill[black] (3,2) rectangle ++(1,1);
+  
+  \node[right] at (5.5,1.5) {dom7};
+\end{tikzpicture}\vspace{.5cm}
+
+\begin{tikzpicture}[scale=0.25]
+  % Draw the grid with transparent borders
+  \draw[draw=none, fill=none] (0,0) grid (3,3);
+  
+  \fill[black] (0,0) rectangle ++(1,1);
+  \fill[white] (0.5,0.5) circle (0.3);
+  \fill[black] (3,0) rectangle ++(1,1);
+  \fill[black] (3,1) rectangle ++(1,1);
+  
+  \node[right] at (5.5,1.5) {maj7b5};
+\end{tikzpicture}\vspace{.5cm}
+
+\end{multicols}
+\begin{multicols}{4}
+
+\begin{tikzpicture}[scale=0.25]
+  % Draw the grid with transparent borders
+  \draw[draw=none, fill=none] (0,0) grid (3,3);
+  
+  \fill[black] (2,0) rectangle ++(1,1);
+  \fill[white] (2.5,0.5) circle (0.3);
+  \fill[black] (2,2) rectangle ++(1,1);
+  \fill[black] (0,2) rectangle ++(1,1);
+  
+  \node[right] at (5.5,1.5) {m7b5};
+\end{tikzpicture}\vspace{.5cm}
+
+\begin{tikzpicture}[scale=0.25]
+  % Draw the grid with transparent borders
+  \draw[draw=none, fill=none] (0,0) grid (3,3);
+  
+  \fill[black] (0,0) rectangle ++(1,1);
+  \fill[white] (0.5,0.5) circle (0.3);
+  \fill[black] (2,1) rectangle ++(1,1);
+  \fill[black] (3,2) rectangle ++(1,1);
+  
+  \node[right] at (5.5,1.5) {maj6};
+\end{tikzpicture}\vspace{.5cm}
+
+\begin{tikzpicture}[scale=0.25]
+  % Draw the grid with transparent borders
+  \draw[draw=none, fill=none] (0,0) grid (3,3);
+  
+  % Fill in and color specific squares
+  \fill[black] (0,-1) rectangle ++(1,1);
+  \fill[white] (0.5,-0.5) circle (0.3);
+  \fill[black] (0,2) rectangle ++(1,1);
+  \fill[black] (2,0) rectangle ++(1,1);
+  
+  \node[right] at (5.5,1.5) {m6};
+\end{tikzpicture}\vspace{.5cm}
+
+\begin{tikzpicture}[scale=0.25]
+  % Draw the grid with transparent borders
+  \draw[draw=none, fill=none] (0,0) grid (3,3);
+  
+  \fill[black] (2,-1) rectangle ++(1,1);
+  \fill[white] (2.5,-0.5) circle (0.3);
+  \fill[black] (2,2) rectangle ++(1,1);
+  \fill[black] (0,2) rectangle ++(1,1);
+  
+  \node[right] at (5.5,1.5) {minmaj7};
+\end{tikzpicture}\vspace{.5cm}
+
+\end{multicols}
+\begin{multicols}{4}
+
+\begin{tikzpicture}[scale=0.25]
+  % Draw the grid with transparent borders
+  \draw[draw=none, fill=none] (0,0) grid (3,3);
+  
+  \fill[black] (0,0) rectangle ++(1,1);
+  \fill[white] (0.5,0.5) circle (0.3);
+  \fill[black] (2,2) rectangle ++(1,1);
+  \fill[black] (3,2) rectangle ++(1,1);
+  \fill[black] (3,1) rectangle ++(1,1);
+  
+  \node[right] at (5.5,1.5) {maj9};
+\end{tikzpicture}\vspace{.5cm}
+
+\begin{tikzpicture}[scale=0.25]
+  % Draw the grid with transparent borders
+  \draw[draw=none, fill=none] (0,0) grid (3,3);
+  
+  \fill[black] (0,-1) rectangle ++(1,1);
+  \fill[white] (0.5,-0.5) circle (0.3);
+  \fill[black] (0,2) rectangle ++(1,1);
+  \fill[black] (0,1) rectangle ++(1,1);
+  \fill[black] (2,1) rectangle ++(1,1);
+  
+  \node[right] at (5.5,1.5) {m9};
+\end{tikzpicture}\vspace{.5cm}
+
+\begin{tikzpicture}[scale=0.25]
+  % Draw the grid with transparent borders
+  \draw[draw=none, fill=none] (0,0) grid (3,3);
+  
+  \fill[black] (0,0) rectangle ++(1,1);
+  \fill[white] (0.5,0.5) circle (0.3);
+  \fill[black] (0,2) rectangle ++(1,1);
+  \fill[black] (3,2) rectangle ++(1,1);
+  \fill[black] (2,2) rectangle ++(1,1);
+  
+  \node[right] at (5.5,1.5) {dom9};
+\end{tikzpicture}\vspace{.5cm}
+
+\begin{tikzpicture}[scale=0.25]
+  % Draw the grid with transparent borders
+  \draw[draw=none, fill=none] (0,0) grid (3,3);
+  
+  \fill[black] (0,0) rectangle ++(1,1);
+  \fill[white] (0.5,0.5) circle (0.3);
+  \fill[black] (3,0) rectangle ++(1,1);
+  \fill[black] (3,2) rectangle ++(1,1);
+  \fill[black] (3,1) rectangle ++(1,1);
+  
+  \node[right] at (5.5,1.5) {maj\#11};
+\end{tikzpicture}\vspace{.5cm}
+
+
+
+\end{multicols}
+
 \section{Drop Voicings}
 \begin{multicols}{4}
 
@@ -874,6 +1038,204 @@
   \fill[black] (2,0) rectangle ++(1,1);
   
   \node[right] at (5.5,1.5) {7(2,4)};
+\end{tikzpicture}\vspace{.5cm}
+
+\end{multicols}
+\section{Scales}
+
+\begin{multicols}{3}
+
+\begin{tikzpicture}[scale=0.4]
+  % Draw the grid with transparent borders
+  \draw[draw=none, fill=none] (0,0) grid (3,3);
+  
+  % Fill in and color specific squares
+  \draw (0,0) rectangle ++(1,1);
+  \node at (0.5,0.5) {1};
+  \draw (1,0) rectangle ++(1,1);
+  \node at (1.5,0.5) {2};
+  \draw (2,0) rectangle ++(1,1);
+  \node at (2.5,0.5) {3};
+  \draw (0,1) rectangle ++(1,1);
+  \node at (0.5,1.5) {4};
+  \draw (1,1) rectangle ++(1,1);
+  \node at (1.5,1.5) {5};
+  \draw (2,1) rectangle ++(1,1);
+  \node at (2.5,1.5) {6};
+  \draw (3,1) rectangle ++(1,1);
+  \node at (3.5,1.5) {7};
+  
+  \node[right] at (5.5,1.5) {\textbf{Major}};
+\end{tikzpicture}\vspace{.5cm}
+
+\begin{tikzpicture}[scale=0.4]
+  % Draw the grid with transparent borders
+  \draw[draw=none, fill=none] (0,0) grid (3,3);
+  
+  % Fill in and color specific squares
+  \draw (2,0) rectangle ++(1,1);
+  \node at (2.5,0.5) {1};
+  \draw (3,0) rectangle ++(1,1);
+  \node at (3.5,0.5) {2};
+  \draw (1,1) rectangle ++(1,1);
+  \node at (1.5,1.5) {3};
+  \draw (2,1) rectangle ++(1,1);
+  \node at (2.5,1.5) {4};
+  \draw (3,1) rectangle ++(1,1);
+  \node at (3.5,1.5) {5};
+  \draw (1,2) rectangle ++(1,1);
+  \node at (1.5,2.5) {6};
+  \draw (2,2) rectangle ++(1,1);
+  \node at (2.5,2.5) {7};
+  
+  \node[right] at (5.5,1.5) {\textbf{Minor}};
+\end{tikzpicture}\vspace{.5cm}
+
+
+\begin{tikzpicture}[scale=0.4]
+  % Draw the grid with transparent borders
+  \draw[draw=none, fill=none] (0,0) grid (3,3);
+  
+  % Fill in and color specific squares
+  \draw (0,0) rectangle ++(1,1);
+  \node at (0.5,0.5) {1};
+  \draw (1,0) rectangle ++(1,1);
+  \node at (1.5,0.5) {2};
+  \draw (2,0) rectangle ++(1,1);
+  \node at (2.5,0.5) {3};
+  \draw (1,1) rectangle ++(1,1);
+  \node at (1.5,1.5) {4};
+  \draw (2,1) rectangle ++(1,1);
+  \node at (2.5,1.5) {5};
+  
+  \node[right] at (5.5,1.5) {\textbf{Pentatonic}};
+\end{tikzpicture}\vspace{.5cm}
+
+\end{multicols}
+\begin{multicols}{3}
+
+\begin{tikzpicture}[scale=0.4]
+  % Draw the grid with transparent borders
+  \draw[draw=none, fill=none] (0,0) grid (3,3);
+  
+  % Fill in and color specific squares
+  \draw (0,0) rectangle ++(1,1);
+  \node at (0.5,0.5) {1};
+  \draw (1,0) rectangle ++(1,1);
+  \node at (1.5,0.5) {2};
+  \draw (-1,1) rectangle ++(1,1);
+  \node at (-0.5,1.5) {3};
+  \draw (0,1) rectangle ++(1,1);
+  \node at (0.5,1.5) {4};
+  \draw (1,1) rectangle ++(1,1);
+  \node at (1.5,1.5) {5};
+  \draw (2,1) rectangle ++(1,1);
+  \node at (2.5,1.5) {6};
+  \draw (3,1) rectangle ++(1,1);
+  \node at (3.5,1.5) {7};
+  
+  \node[right] at (4.5,1.5) {\textbf{Melodic Minor}};
+\end{tikzpicture}\vspace{.5cm}
+
+\begin{tikzpicture}[scale=0.4]
+  % Draw the grid with transparent borders
+  \draw[draw=none, fill=none] (0,0) grid (3,3);
+  
+  % Fill in and color specific squares
+  \draw (0,0) rectangle ++(1,1);
+  \node at (0.5,0.5) {1};
+  \draw (1,0) rectangle ++(1,1);
+  \node at (1.5,0.5) {2};
+  \draw (-1,1) rectangle ++(1,1);
+  \node at (-0.5,1.5) {3};
+  \draw (2,0) rectangle ++(1,1);
+  \node at (2.5,0.5) {4};
+  \draw (1,1) rectangle ++(1,1);
+  \node at (1.5,1.5) {5};
+  \draw (2,1) rectangle ++(1,1);
+  \node at (2.5,1.5) {6};
+  
+  \node[right] at (4.5,1.5) {\textbf{Major Blues}};
+\end{tikzpicture}\vspace{.5cm}
+
+
+\begin{tikzpicture}[scale=0.4]
+  % Draw the grid with transparent borders
+  \draw[draw=none, fill=none] (0,0) grid (3,3);
+  
+  % Fill in and color specific squares
+  \draw (2,0) rectangle ++(1,1);
+  \node at (2.5,0.5) {1};
+  \draw (1,1) rectangle ++(1,1);
+  \node at (1.5,1.5) {2};
+  \draw (2,1) rectangle ++(1,1);
+  \node at (2.5,1.5) {3};
+  \draw (0,2) rectangle ++(1,1);
+  \node at (0.5,2.5) {4};
+  \draw (3,1) rectangle ++(1,1);
+  \node at (3.5,1.5) {5};
+  \draw (2,2) rectangle ++(1,1);
+  \node at (2.5,2.5) {6};
+  
+  \node[right] at (5.5,1.5) {\textbf{Minor Blues}};
+\end{tikzpicture}\vspace{.5cm}
+
+\end{multicols}
+\begin{multicols}{3}
+
+\begin{tikzpicture}[scale=0.4]
+  % Draw the grid with transparent borders
+  \draw[draw=none, fill=none] (0,0) grid (3,3);
+  
+  % Fill in and color specific squares
+  \draw (1,0) rectangle ++(1,1);
+  \node at (1.5,0.5) {1};
+  \draw (2,0) rectangle ++(1,1);
+  \node at (2.5,0.5) {2};
+  \draw (0,1) rectangle ++(1,1);
+  \node at (0.5,1.5) {3};
+  \draw (1,1) rectangle ++(1,1);
+  \node at (1.5,1.5) {4};
+  \draw (2,1) rectangle ++(1,1);
+  \node at (2.5,1.5) {5};
+  \draw (0,2) rectangle ++(1,1);
+  \node at (0.5,2.5) {6};
+  \draw (4,1) rectangle ++(1,1);
+  \node at (4.5,1.5) {7};
+  
+  \node[right] at (5.5,1.5) {\textbf{Harmonic Minor}};
+\end{tikzpicture}\vspace{.5cm}
+
+\begin{tikzpicture}[scale=0.4]
+  % Draw the grid with transparent borders
+  \draw[draw=none, fill=none] (0,0) grid (3,3);
+  
+  % Fill in and color specific squares
+  \draw (1,0) rectangle ++(1,1);
+  \node at (1.5,0.5) {1};
+  \draw (2,0) rectangle ++(1,1);
+  \node at (2.5,0.5) {2};
+  \draw (3,0) rectangle ++(1,1);
+  \node at (3.5,0.5) {3};
+  \draw (1,1) rectangle ++(1,1);
+  \node at (1.5,1.5) {4};
+  \draw (2,1) rectangle ++(1,1);
+  \node at (2.5,1.5) {5};
+  \draw (0,2) rectangle ++(1,1);
+  \node at (0.5,2.5) {6};
+  \draw (4,1) rectangle ++(1,1);
+  \node at (4.5,1.5) {7};
+  
+  \node[right] at (5.5,1.5) {\textbf{Harmonic Major}};
+\end{tikzpicture}\vspace{.5cm}
+
+\begin{tikzpicture}[scale=0.4]
+  % Draw the grid with transparent borders
+  \draw[draw=none, fill=none] (0,0) grid (3,3);
+  
+  % Fill in and color specific squares
+  
+  \node[right] at (5.5,1.5) {\textbf{}};
 \end{tikzpicture}\vspace{.5cm}
 
 \end{multicols}

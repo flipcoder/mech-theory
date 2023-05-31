@@ -12,4 +12,6 @@ Terminology: The term "midimech" refers to my open source project, but the terms
 "mech layout" and "wholetone layout" are used now in the LinnStrument community
 to refer to this layout generally.
 
-Have fun!
+If you find mistakes in the information here, please report it as an issue.
+
+Thanks and have fun!
